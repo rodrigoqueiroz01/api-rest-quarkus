@@ -1,0 +1,15 @@
+quarkus:
+  http:
+    port: 8080
+    root-path: /api/
+
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/customer_db
+
+  hibernate-orm:
+    database:
+      generation: update

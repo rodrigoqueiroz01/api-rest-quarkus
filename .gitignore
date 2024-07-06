@@ -1,0 +1,23 @@
+# IntelliJ IDEA
+.idea
+
+# Microservice Customer
+customer/target
+customer/.mvn
+customer/mvnw
+customer/mvnw.cmd
+customer/customer.iml
+
+# Microservice Order
+order/target
+order/.mvn
+order/mvnw
+order/mvnw.cmd
+order/order.iml
+
+# Microservice Product
+product/target
+product/.mvn
+product/mvnw
+product/mvnw.cmd
+product/product.iml
