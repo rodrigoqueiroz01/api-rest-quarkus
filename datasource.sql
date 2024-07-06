@@ -1,8 +1,6 @@
 -- CUSTOMER DB
 CREATE DATABASE customer_db;
 
-CREATE SCHEMA public;
-
 CREATE TABLE customer_data(
     id      SERIAL PRIMARY KEY,
     name    VARCHAR(255) NOT NULL,
@@ -15,8 +13,6 @@ CREATE TABLE customer_data(
 -- PRODUCT DB
 CREATE DATABASE product_db;
 
-CREATE SCHEMA public;
-
 CREATE TABLE product_data(
     id          SERIAL PRIMARY KEY,
     name        VARCHAR(255) NOT NULL,
@@ -28,8 +24,6 @@ CREATE TABLE product_data(
 
 -- ORDER DB
 CREATE DATABASE order_db;
-
-CREATE SCHEMA public;
 
 CREATE TABLE order_data(
     order_id      SERIAL PRIMARY KEY,
