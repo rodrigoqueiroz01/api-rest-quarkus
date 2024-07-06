@@ -2,7 +2,7 @@ quarkus:
   # Application
   http:
     port: 8082
-    root-path: /api/
+    root-path: /order/api/
 
   # Datasource
   datasource:
@@ -19,9 +19,9 @@ quarkus:
   # Microservices
   rest-client:
     "com.dev.client.CustomerClient":
-      url: http://localhost:8080/api
+      url: http://localhost:8080/customer/api
     "com.dev.client.ProductClient":
-      url: http://localhost:8081/api
+      url: http://localhost:8081/product/api
 
   # Security
   oidc:

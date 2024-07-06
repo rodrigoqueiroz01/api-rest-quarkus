@@ -1,7 +1,7 @@
 quarkus:
   http:
     port: 8081
-    root-path: /api/
+    root-path: product/api/
 
   datasource:
     db-kind: postgresql
