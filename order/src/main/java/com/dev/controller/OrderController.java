@@ -2,6 +2,7 @@ package com.dev.controller;
 
 import com.dev.dto.OrderDTO;
 import com.dev.service.OrderService;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
@@ -17,6 +18,7 @@ public class OrderController {
     OrderService service;
 
     @GET
+    @RolesAllowed({"user", "admin"})
     @Produces(APPLICATION_JSON)
     public List<OrderDTO> findAll() {
         return service.getAllOrders();

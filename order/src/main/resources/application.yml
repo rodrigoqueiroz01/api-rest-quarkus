@@ -1,8 +1,10 @@
 quarkus:
+  # Application
   http:
     port: 8082
     root-path: /api/
 
+  # Datasource
   datasource:
     db-kind: postgresql
     username: postgres
@@ -10,12 +12,20 @@ quarkus:
     jdbc:
       url: jdbc:postgresql://db:5432/product_db
 
+  hibernate-orm:
+    database:
+      generation: update
+
+  # Microservices
   rest-client:
     "com.dev.client.CustomerClient":
       url: http://localhost:8080/api
     "com.dev.client.ProductClient":
       url: http://localhost:8081/api
 
-  hibernate-orm:
-    database:
-      generation: update
+  # Security
+  oidc:
+    auth-server-url: http://localhost:8180/realms/quarkus
+    client-id: quarkus-core
+    credentials:
+      secret: secret
